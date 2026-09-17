@@ -2,8 +2,8 @@ import express from 'express';
 
 import { showHomePage } from './controllers/index.js';
 import { showOrganizationsPage } from './controllers/organizations.js';
-import { showProjectsPage } from './controllers/projects.js';
-import { showCategoriesPage } from './controllers/categories.js';
+import { showProjectsPage, showProjectDetailsPage } from './controllers/projects.js';
+import { showCategoriesPage, showCategoryDetailsPage} from './controllers/categories.js';
 import { testErrorPage } from './controllers/errors.js';
 import { showOrganizationDetailsPage } from './controllers/organizations.js';
 
@@ -18,5 +18,9 @@ router.get('/categories', showCategoriesPage);
 router.get('/test-error', testErrorPage);
 
 router.get('/organization/:id', showOrganizationDetailsPage);
+
+router.get('/project/:id', showProjectDetailsPage);
+
+router.get('/category/:id', showCategoryDetailsPage);
 
 export default router;

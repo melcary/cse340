@@ -57,7 +57,7 @@ VALUES
  'Community Garden Pavilion',
  'Construction of a covered pavilion and gathering space for a community garden and neighborhood activities.',
  'Riverside Community Garden',
- '2026-06-14'),
+ '2026-12-14'),
 
 (1,
  'Neighborhood Walking Trail',
@@ -82,13 +82,13 @@ VALUES
  'Community Greenhouse',
  'Construction of a shared greenhouse that allows local residents to grow vegetables throughout the year.',
  'Northside Community Farm',
- '2026-05-09'),
+ '2027-05-09'),
 
 (2,
  'Neighborhood Composting Project',
  'Community composting initiative designed to reduce food waste and produce natural fertilizer for local gardens.',
  'Oak Street Community Center',
- '2026-06-06'),
+ '2026-12-06'),
 
 (2,
  'Fresh Food Education Fair',
@@ -101,7 +101,7 @@ VALUES
  'Food Bank Volunteer Day',
  'Volunteer event supporting the preparation, organization, and distribution of food packages to families in need.',
  'Central Food Bank',
- '2026-03-28'),
+ '2026-10-28'),
 
 (3,
  'Senior Center Support',
@@ -125,7 +125,7 @@ VALUES
  'Back-to-School Volunteer Program',
  'Volunteer initiative providing school supplies and educational support to children before the new school year.',
  'Hope Community Center',
- '2026-08-08');
+ '2026-11-08');
 
 CREATE TABLE category (
     category_id SERIAL PRIMARY KEY,
@@ -201,3 +201,6 @@ VALUES
 (15, 2), -- Back-to-School Volunteer Program -> Community Development
 (15, 3); -- Back-to-School Volunteer Program -> Education
 
+SELECT project_id, title, project_date
+FROM service_project
+ORDER BY project_date ASC;
